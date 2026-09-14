@@ -21,8 +21,13 @@ venv/
 .pytest_cache/
 
 # Data
-data/*
-!data/.gitkeep
+data/raw/*
+data/interim/*
+data/processed/*
+
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
 
 # Generated artifacts
 artifacts/*

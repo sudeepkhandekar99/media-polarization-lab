@@ -1,0 +1,14 @@
+jupyterlab
+ipykernel
+
+pandas
+numpy
+pyarrow
+
+matplotlib
+plotly
+
+scipy
+scikit-learn
+
+python-dotenv
