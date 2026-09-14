@@ -1,0 +1,52 @@
+{
+  "unit_of_analysis": "news outlet by target month",
+  "climate_relevance": {
+    "classifier": "sentence-transformers/all-MiniLM-L6-v2 multi-anchor semantic classifier",
+    "similarity_threshold": 0.24,
+    "aggregation": "six-month trailing semantic window",
+    "minimum_window_climate_headlines": 50,
+    "minimum_current_month_climate_headlines": 1
+  },
+  "climate_dimensions": [
+    "climate_science",
+    "emissions_fossil_fuels",
+    "clean_energy_transition",
+    "climate_policy",
+    "climate_impacts",
+    "adaptation_resilience"
+  ],
+  "representation": {
+    "embedding_dimension": 384,
+    "dimension_measure": "relative similarity to six climate semantic anchors"
+  },
+  "primary_outcome": {
+    "dimension": "climate_impacts",
+    "measure": "monthly cross-outlet standard deviation of relative thematic emphasis"
+  },
+  "primary_panel": {
+    "name": "stable_90",
+    "definition": "outlets observed in at least 90% of complete analysis months"
+  },
+  "robustness_panels": {
+    "dynamic_panel": "all qualifying outlets available in each month",
+    "fully_balanced": "outlets present in every analysis month"
+  },
+  "inference": {
+    "trend_model": "linear monthly time trend",
+    "standard_errors": "Newey-West / HAC",
+    "primary_hac_lags": 12,
+    "additional_checks": [
+      "6-lag HAC",
+      "IQR dispersion",
+      "alternative outlet panels",
+      "leave-one-outlet robustness",
+      "leave-one-year-out robustness",
+      "early-middle-late comparison",
+      "rolling 36-month trends",
+      "polynomial trend comparison",
+      "data-driven structural-break search",
+      "bootstrap Sup-F structural-break test"
+    ]
+  },
+  "interpretation": "Higher cross-outlet dispersion indicates greater disagreement among outlets in the relative thematic emphasis of climate coverage. It does not by itself measure ideological direction."
+}

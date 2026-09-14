@@ -1,0 +1,31 @@
+{
+  "dataset_version": "1.0",
+  "study_months": 116,
+  "first_month": "2016-06",
+  "last_month": "2026-01",
+  "dimensions": [
+    "climate_science",
+    "emissions_fossil_fuels",
+    "clean_energy_transition",
+    "climate_policy",
+    "climate_impacts",
+    "adaptation_resilience"
+  ],
+  "panels": [
+    "dynamic_panel",
+    "fully_balanced",
+    "stable_90"
+  ],
+  "outlets": 136,
+  "stable_90_outlets": 20,
+  "fully_balanced_outlets": 6,
+  "files": [
+    "monthly_dimensions.json",
+    "outlet_month_profiles.json",
+    "outlet_summary.json",
+    "research_summary.json",
+    "headline_metrics.json",
+    "methodology.json",
+    "monthly_overall.json"
+  ]
+}

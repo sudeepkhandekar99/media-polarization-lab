@@ -1,0 +1,30 @@
+{
+  "primary_panel": "stable_90",
+  "study_period": {
+    "start": "2016-06",
+    "end": "2026-01",
+    "months": 116
+  },
+  "climate_impact_divergence": {
+    "annualized_change": 0.005720240360616871,
+    "annualized_change_pct_points": 0.5720240360616871,
+    "ci_lower": 0.004652396237878801,
+    "ci_upper": 0.006788084483354941,
+    "p_value": 8.715323521202933e-26,
+    "r_squared": 0.7491794135586678
+  },
+  "early_vs_late": {
+    "early": 0.03886552284721412,
+    "middle": 0.058641293592197406,
+    "late": 0.07674726101982977,
+    "absolute_change": 0.037881738172615656,
+    "percent_change": 97.46874709889828
+  },
+  "structural_break": {
+    "selected_month": "2024-07",
+    "bootstrap_p_value": 0.6183816183816184,
+    "slope_change_p_value": 0.011893380050482488,
+    "pre_break_slope": 0.0063012107537619945,
+    "post_break_slope": -0.0004291503526229817
+  }
+}
