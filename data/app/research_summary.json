@@ -1,0 +1,89 @@
+{
+  "methodology": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "embedding_dimension": 384,
+    "climate_relevance_threshold": 0.24,
+    "climate_classifier": "multi-anchor top-2 mean",
+    "classifier_validation_roc_auc": 0.8992,
+    "trailing_centroid_window_months": 6,
+    "minimum_window_climate_articles": 50,
+    "minimum_current_month_climate_articles": 1,
+    "primary_panel": "stable_90",
+    "stable_panel_minimum_coverage_pct": 90,
+    "primary_dispersion_measure": "cross-outlet standard deviation",
+    "secondary_dispersion_measure": "cross-outlet interquartile range",
+    "hac_lags": 12,
+    "study_start": "2016-06",
+    "study_end": "2026-01",
+    "complete_study_months": 116
+  },
+  "headline_metrics": {
+    "nlp_articles": 0,
+    "climate_articles": 0,
+    "all_outlets": 136,
+    "stable_90_outlets": 20,
+    "fully_balanced_outlets": 6,
+    "study_start": "2016-06",
+    "study_end": "2026-01",
+    "study_months": 116,
+    "climate_impact_early_mean_sd": 0.03886552284721411,
+    "climate_impact_late_mean_sd": 0.07674726101982976,
+    "climate_impact_absolute_increase": 0.03788173817261565,
+    "climate_impact_pct_increase": 97.46874709889828,
+    "climate_impact_annualized_trend": 0.005842558867517772,
+    "climate_impact_trend_ci_lower": 0.0048323099113747854,
+    "climate_impact_trend_ci_upper": 0.006852807823660759,
+    "climate_impact_trend_p_value": 1.0976856863244597e-20
+  },
+  "primary_climate_impact_trend": {
+    "annualized_change": 0.005842558867517772,
+    "hac_se": 0.0005099711680733143,
+    "ci_lower": 0.0048323099113747854,
+    "ci_upper": 0.006852807823660759,
+    "p_value": 1.0976856863244597e-20,
+    "r_squared": 0.7621637588912205
+  },
+  "climate_science_trend": {
+    "annualized_change": 0.0004593610060300181,
+    "hac_se": 0.0003897402761102957,
+    "ci_lower": -0.00031271147915546164,
+    "ci_upper": 0.0012314334912154978,
+    "p_value": 0.24099834349900837,
+    "r_squared": 0.05677765185477812
+  },
+  "impact_minus_science_contrast": {
+    "annualized_change": 0.005383197861487754,
+    "hac_se": 0.00037974750064828156,
+    "ci_lower": 0.004630920987527926,
+    "ci_upper": 0.0061354747354475814,
+    "p_value": 6.482078368912802e-27,
+    "r_squared": 0.777296725439575
+  },
+  "period_summary": [
+    {
+      "period": "early",
+      "months": 39,
+      "impact_mean": 0.03886552284721411,
+      "impact_median": 0.03908889730668625,
+      "science_mean": 0.02886867179810612,
+      "mean_outlets": 19.41025641025641
+    },
+    {
+      "period": "middle",
+      "months": 39,
+      "impact_mean": 0.058641293592197406,
+      "impact_median": 0.058167452379963354,
+      "science_mean": 0.03358865576899981,
+      "mean_outlets": 19.71794871794872
+    },
+    {
+      "period": "late",
+      "months": 38,
+      "impact_mean": 0.07674726101982976,
+      "impact_median": 0.0764424580760987,
+      "science_mean": 0.03044553821707629,
+      "mean_outlets": 18.763157894736842
+    }
+  ],
+  "structural_break": {
+    "candidate_month": 

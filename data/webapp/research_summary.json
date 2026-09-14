@@ -1,0 +1,58 @@
+{
+  "project": {
+    "title": "Semantic Polarization in Climate-News Coverage",
+    "analysis_level": "outlet-month",
+    "primary_panel": "stable_90",
+    "study_first_month": "2016-06",
+    "study_last_month": "2026-01",
+    "study_months": 116,
+    "panels": [
+      "dynamic_panel",
+      "fully_balanced",
+      "stable_90"
+    ]
+  },
+  "primary_finding": {
+    "dimension": "climate_impacts",
+    "dispersion_measure": "cross-outlet standard deviation of relative climate-impact emphasis",
+    "annualized_change": 0.005720240360616871,
+    "ci_lower": 0.004652396237878801,
+    "ci_upper": 0.006788084483354941,
+    "p_value": 8.715323521202933e-26,
+    "r_squared": 0.7491794135586678
+  },
+  "period_comparison": {
+    "early_mean_dispersion": 0.03886552284721412,
+    "middle_mean_dispersion": 0.058641293592197406,
+    "late_mean_dispersion": 0.07674726101982977,
+    "early_to_late_absolute_change": 0.037881738172615656,
+    "early_to_late_pct_change": 97.46874709889828
+  },
+  "structural_break": {
+    "candidate_break_month": "2024-07",
+    "bootstrap_p_value": 0.6183816183816184,
+    "pre_break_slope": 0.0063012107537619945,
+    "slope_change": -0.006730361106384976,
+    "slope_change_p_value": 0.011893380050482488,
+    "post_break_slope": -0.0004291503526229817,
+    "break_supported_by_bootstrap_05": false
+  },
+  "model_shape": {
+    "preferred_polynomial_degree": 1,
+    "preferred_model_bic": -751.393510733484
+  },
+  "panel_sizes": {
+    "dynamic_panel": {
+      "months": 116,
+      "mean_outlets_per_month": 63.275862068965516
+    },
+    "fully_balanced": {
+      "months": 116,
+      "mean_outlets_per_month": 6.0
+    },
+    "stable_90": {
+      "months": 116,
+      "mean_outlets_per_month": 19.301724137931036
+    }
+  }
+}

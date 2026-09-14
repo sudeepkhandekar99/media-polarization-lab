@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "generated_from": "media-polarization-lab final analysis pipeline",
+  "primary_panel": "stable_90",
+  "study_period": {
+    "start": "2016-06",
+    "end": "2026-01",
+    "months": 116
+  },
+  "files": {
+    "research_summary": "research_summary.json",
+    "headline_metrics": "headline_metrics.json",
+    "methodology": "methodology.json",
+    "monthly_climate_dispersion": "monthly_climate_dispersion.json",
+    "climate_impact_periods": "climate_impact_periods.json",
+    "climate_impact_rolling_trends": "climate_impact_rolling_trends.json",
+    "climate_impact_structural_breaks": "climate_impact_structural_breaks.json",
+    "climate_dimension_trends": "climate_dimension_trends.json",
+    "climate_impact_outlet_drivers": "climate_impact_outlet_drivers.json"
+  }
+}

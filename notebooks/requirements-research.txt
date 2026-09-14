@@ -12,3 +12,8 @@ scipy
 scikit-learn
 
 python-dotenv
+
+sentence-transformers
+torch
+tqdm
+statsmodels
