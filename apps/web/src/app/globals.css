@@ -1,140 +1,255 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+/* apps/web/src/app/globals.css */
 
-@custom-variant dark (&:is(.dark *));
+@import "tailwindcss";
+
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
+:root {
+  --background: #fbfaf7;
+  --foreground: #171716;
+
+  --card: #ffffff;
+  --card-foreground: #171716;
+
+  --muted: #f1efe9;
+  --muted-foreground: #6f6c65;
+
+  --border: #dedbd3;
+
+  --accent: #ece9e2;
+  --accent-foreground: #171716;
+
+  --radius: 0.75rem;
+}
+
+
+/* ============================================================
+   TAILWIND THEME
+   ============================================================ */
 
 @theme inline {
-  --font-sans: var(--font-sans);
-  --font-display: var(--font-display);
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
+  --color-border: var(--border);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-
-  --color-destructive: var(--destructive);
-
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root {
-  --radius: 0.875rem;
 
-  --background: #f8f7f3;
-  --foreground: #20211f;
+/* ============================================================
+   DOCUMENT
+   ============================================================ */
 
-  --card: #ffffff;
-  --card-foreground: #20211f;
-
-  --popover: #ffffff;
-  --popover-foreground: #20211f;
-
-  --primary: #32363a;
-  --primary-foreground: #ffffff;
-
-  --secondary: #eeece6;
-  --secondary-foreground: #343532;
-
-  --muted: #f0eee9;
-  --muted-foreground: #71736e;
-
-  --accent: #ebe7f4;
-  --accent-foreground: #37333e;
-
-  --destructive: #b84d4d;
-
-  --border: #dedcd6;
-  --input: #dedcd6;
-  --ring: #98959f;
-
-  /* project palette */
-  --pastel-lavender: #e8e3f1;
-  --pastel-sage: #dfe9df;
-  --pastel-blue: #e0ebf1;
-  --pastel-peach: #f2e1d7;
-  --pastel-yellow: #f2ecd2;
-
-  --surface-soft: #f3f1ec;
-  --surface-deep: #292b2c;
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+  color-scheme: light;
 }
 
-.dark {
-  --background: #171817;
-  --foreground: #f3f2ed;
 
-  --card: #202120;
-  --card-foreground: #f3f2ed;
+body {
+  margin: 0;
+  min-height: 100vh;
 
-  --popover: #202120;
-  --popover-foreground: #f3f2ed;
+  background:
+    radial-gradient(
+      circle at 50% -20%,
+      rgb(255 255 255 / 0.9),
+      transparent 42rem
+    ),
+    var(--background);
 
-  --primary: #eeeeea;
-  --primary-foreground: #20211f;
+  color: var(--foreground);
 
-  --secondary: #292a28;
-  --secondary-foreground: #ededE8;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
-  --muted: #292a28;
-  --muted-foreground: #a8aaa4;
-
-  --accent: #35313d;
-  --accent-foreground: #f3f2ed;
-
-  --destructive: #d46a6a;
-
-  --border: #393a37;
-  --input: #393a37;
-  --ring: #777872;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
 
+/* ============================================================
+   BASE ELEMENTS
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+img,
+svg {
+  display: block;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+
+p {
+  text-wrap: pretty;
+}
+
+
+code,
+pre,
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ============================================================
+   FOCUS
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color:
+    #bbb7ad
+    transparent;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #bbb7ad;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #99958c;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+
+/* ============================================================
+   RECHARTS
+   ============================================================ */
+
+.recharts-wrapper,
+.recharts-surface {
+  outline: none;
+}
+
+
+.recharts-cartesian-axis-tick-value {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+
+/* ============================================================
+   MOTION
+   ============================================================ */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-sans), sans-serif;
-  }
-}
 
-@layer utilities {
-  .font-display {
-    font-family: var(--font-display), serif;
-  }
-
-  .page-container {
-    @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-10;
-  }
-
-  .text-balance {
-    text-wrap: balance;
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
